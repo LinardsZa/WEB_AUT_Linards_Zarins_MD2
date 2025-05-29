@@ -7,15 +7,15 @@ describe("Make an Appointment", () => {
     BasePage.visit();
     LoginPage.AppointmentBtn.click();
 
-    LoginPage.usernameInput.type("John Doe");
-    LoginPage.passInput.type("ThisIsNotAPassword");
+    LoginPage.usernameIn.type("John Doe");
+    LoginPage.passIn.type("ThisIsNotAPassword");
     LoginPage.loginBtn.click();
 
-    AppointmentPage.facilityDropdown.select("Seoul CURA Healthcare Center");
+    AppointmentPage.dropdownFacility.select("Seoul CURA Healthcare Center");
     AppointmentPage.readmissionCheckbox.check();
     AppointmentPage.medicareRadio.check();
-    AppointmentPage.dateInput.type("30/05/2025");
-    AppointmentPage.commentInput.type("CURA Healthcare Service", { force: true });
+    AppointmentPage.dateIn.type("30/05/2025");
+    AppointmentPage.commentIn.type("CURA Healthcare Service", { force: true });
     AppointmentPage.bookBtn.click();
 
     AppointmentPage.confirmFacility.should("contain", "Seoul CURA Healthcare Center");

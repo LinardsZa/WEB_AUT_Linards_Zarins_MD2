@@ -1,7 +1,7 @@
-import { BasePage } from "./basepage";
+import { BasePage } from "./basePage";
 
 export class AppointmentPage extends BasePage {
-  static get facilityDropdown() {
+  static get dropdownFacility() {
     return cy.get("#combo_facility");
   }
 
@@ -13,11 +13,11 @@ export class AppointmentPage extends BasePage {
     return cy.get("#radio_program_medicaid");
   }
 
-  static get dateInput() {
+  static get dateIn() {
     return cy.get("#txt_visit_date");
   }
 
-  static get commentInput() {
+  static get commentIn() {
     return cy.get("#txt_comment");
   }
 
